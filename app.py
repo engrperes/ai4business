@@ -48,8 +48,12 @@ def load_document(file_path, file_type):
             full_text.append(para.text)
         return [{"page_content": "\n".join(full_text)}]
     elif file_type in ['image/jpeg', 'image/png']:
-        text = pytesseract.image_to_string(Image.open(file_path))
-        return [{"page_content": text}]
+    st.warning("OCR disabled - using image description instead")
+    response = openai.ChatCompletion.create(
+        model="gpt-4-vision-preview",
+        messages=[{"role": "user", "content": f"Describe this image: {file_path}"}]
+    )
+    return [{"page_content": response.choices[0].message.content}]
     else:
         st.error("Unsupported file type.")
         return None
@@ -126,4 +130,5 @@ if run_button and file_input and openaikey and prompt:
             result = qa(temp_file_path, file_input.type, prompt, select_chain_type, select_k)
             # Exibir o resultado
             display_result(result)
+
 
