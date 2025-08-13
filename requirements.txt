@@ -5,9 +5,11 @@ chromadb==0.4.22
 pypdf==3.17.4
 tiktoken==0.5.2
 pytesseract==0.3.10
-Pillow==10.1.0
+Pillow==10.2.0  # Versão atualizada para evitar o erro de build
 python-docx==1.1.0
 pydantic==1.10.13
-typing-extensions==4.8.0
+typing-extensions==4.10.0  # Atualizado para compatibilidade com torch
 sentence-transformers==2.2.2
-numpy==1.24.4  # Versão crítica para chromadb
+numpy==1.24.4
+torch==2.2.1  # Adicionado explicitamente
+torchvision==0.17.1  # Adicionado explicitamente
