@@ -1,1 +1,2 @@
-# ai4business
+# langchain-app
+Perguntas e Respostas a um PDF com Langchain
