@@ -15,8 +15,8 @@ from pypdf.errors import PdfReadError
 from openai.error import AuthenticationError, InvalidRequestError
 
 # Adicionar a imagem no cabeçalho
-image_url = "https://cienciadosdados.com/images/CINCIA_DOS_DADOS_4.png"
-st.image(image_url, use_column_width=True)
+#image_url = "https://cienciadosdados.com/images/CINCIA_DOS_DADOS_4.png"
+#st.image(image_url, use_column_width=True)
 
 # Adicionar o nome do aplicativo
 st.subheader("Q&A com IA - PLN usando LangChain")
@@ -126,3 +126,4 @@ if run_button and file_input and openaikey and prompt:
             result = qa(temp_file_path, file_input.type, prompt, select_chain_type, select_k)
             # Exibir o resultado
             display_result(result)
+
