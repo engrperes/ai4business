@@ -1,9 +1,13 @@
-langchain==0.0.234
-openai==0.27.8
-chromadb==0.3.29
-pypdf==3.12.2
-streamlit==1.24.1
-tiktoken==0.4.0
-pytesseract
-Pillow
-python-docx
+langchain==0.1.12
+openai==1.12.0
+chromadb==0.4.22
+pypdf==3.17.4
+streamlit==1.29.0
+tiktoken==0.5.2
+pytesseract==0.3.10
+Pillow==10.1.0
+python-docx==1.1.0
+pydantic==1.10.13  # Necessário para langchain
+typing-extensions==4.8.0  # Necessário para várias libs
+sqlite3==2.6.0  # Para chromadb
+sentence-transformers==2.2.2  # Se usar embeddings
